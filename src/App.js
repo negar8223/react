@@ -7,7 +7,7 @@ function Counter() {
  
   const [count, setCount] = useState(0);
   useEffect(() => {
-    console.log({ count });
+    console.log( count );
   }, [count]);
   const increas = useCallback(() => {
     setCount((pre) => pre + 1);
