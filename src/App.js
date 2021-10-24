@@ -10,15 +10,15 @@ function Counter() {
     console.log( count );
   }, [count]);
   const increas = useCallback(() => {
-    setCount((pre) => pre + 1);
-  }, [count]);
+    setCount((precount) => precount + 1);
+  },[setCount]);
   const decreas = useCallback(() => {
-    setCount((pre) => pre - 1);
-  });
+    setCount((precount) => precount - 1);
+  },[setCount]);
 
   const reset = useCallback(() => {
     setCount(0);
-  }, [count]);
+  },[setCount]);
   return (
     <>
       <h1>count : {count}</h1>
